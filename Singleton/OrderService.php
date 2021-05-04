@@ -4,8 +4,8 @@ class OrderService
 {
     public function save($orderId)
     {
-        $db = new ConnectDbWOSingleton();
+        $db = new ConnectDbWOSingleton("localhost", "root", "password", "dbName");
         $connection = $db->getConnection();
-        $connection->prepare('INSERT INTO .....');
+        $inser = $connection->prepare('INSERT INTO .....');
     }
 }
